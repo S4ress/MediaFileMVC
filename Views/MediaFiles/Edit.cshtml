@@ -1,0 +1,60 @@
+﻿@model MediaFileTask.Models.MediaFile
+@{
+    ViewBag.Title = "Edit";
+}
+
+@using(Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="form-horizontal">
+    <h3>MediaFile</h3>
+    <hr />
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <div class="col-md-6">
+            <h3>
+                @Html.ValueFor(model => model.Name)
+            </h3>
+            <br />
+            <h4>
+                Duration:
+                @Html.ValueFor(model => model.Duration)
+            </h4>
+            <h4>
+                Size:
+                @Html.ValueFor(model => model.Size)
+            </h4>
+       </div>
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+            <!--<input type="button" value="test" id="button" href="Index.cshtml"/>-->
+            @Html.ActionLink("Update", "Index", null, new { id = "button" })
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+                $(document).ready(function () {
+                    $("#button").click(function(){
+                        var std = {
+                            id : @Model.Id,
+                            name : $("#Name").val()
+                        };
+                        $.ajax({
+                            type: "POST",
+                            url: '@Url.Action("RenameFile")',
+                            data: JSON.stringify(std),
+                            dataType: "json",
+                            contentType: "application/json; charset=utf-8",
+                            
+                        });
+                    });
+                });
+    </script>
+    }
+
+}

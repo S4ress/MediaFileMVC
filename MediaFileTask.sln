@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaFileTask", "MediaFileTask.csproj", "{B6F92C01-1AD4-45DE-BE44-7C93840BB385}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6F92C01-1AD4-45DE-BE44-7C93840BB385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F92C01-1AD4-45DE-BE44-7C93840BB385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F92C01-1AD4-45DE-BE44-7C93840BB385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F92C01-1AD4-45DE-BE44-7C93840BB385}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27AB4F83-402E-42D5-B62A-F0620AFF5619}
+	EndGlobalSection
+EndGlobal

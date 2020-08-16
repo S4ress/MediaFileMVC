@@ -1,0 +1,26 @@
+﻿
+@model IEnumerable<MediaFileTask.Models.MediaFile>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>Media files</h3>
+    <table class="table">
+        <tr class="header">
+            <td scope="col">Название медиа файла</td>
+            <td scope="col">Размер файла</td>
+            <td scope="col">Продолжительность файла</td>
+            <td scope="col"></td>
+        </tr>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td scope="col"><p>@m.Name</p></td>
+                <td scope="col"><p>@m.Size</p></td>
+                <td scope="col"><p>@m.Duration</p></td>
+                <td scope="col">@Html.ActionLink("Edit", "Edit", new { id = m.Id })</td>
+            </tr>
+        }
+    </table>
+</div>
